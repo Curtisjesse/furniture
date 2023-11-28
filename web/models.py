@@ -28,3 +28,20 @@ class Services(models.Model):
     
     def __str__(self):
         return self.title
+    
+class Teams(models.Model):
+    name = models.CharField(max_length=100)
+    title = models.CharField(max_length=150)
+    description = models.TextField(max_length=250, blank=False)
+    img = models.ImageField(upload_to='Teams')
+    
+    def __str__(self):
+        return self.name
+class Testimonials(models.Model):
+    name = models.CharField(max_length=100)
+    title = models.CharField(max_length=150)
+    description = models.TextField(max_length=250, blank=False)
+    img = models.ImageField(upload_to='Testimonials')
+    
+    def __str__(self):
+        return self.name
